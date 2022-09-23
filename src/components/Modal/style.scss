@@ -1,0 +1,10 @@
+.Modal {
+  z-index: 1;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background-color: rgba($color: #161616, $alpha: .7);
+}

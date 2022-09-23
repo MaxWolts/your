@@ -1,0 +1,45 @@
+.Loading {
+  z-index: 0;
+  position: absolute;
+  top: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  transform: rotate(45deg);
+  background-color: $color-black;
+
+  &:after {
+    z-index: 0;
+    content: "";
+    position: absolute;
+    height: 110px;
+    width: 110px;
+    border-radius: 50%;
+    transform: rotate(45deg);
+    background-color: #f9f9f900;
+    border: 1.6px dashed $color-black;
+    animation: rotateInfinite linear 4s infinite;
+  }
+  &:before {
+    z-index: 1;
+    content: "";
+    position: absolute;
+    height: 60px;
+    width: 60px;
+    background-color: #f9f9f900;
+    border: 2px solid $color-black;
+    transform: rotate(180deg);
+    animation: rotate 1s linear 0s infinite;
+  }
+}
+
+@keyframes rotate {
+  69% { transform: rotate(180deg); }
+  70% { transform: rotate(0deg); }
+  90% { transform: rotate(180deg); }
+}
+@keyframes rotateInfinite {
+  to { transform: rotate(90deg); }
+}

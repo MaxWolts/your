@@ -1,0 +1,78 @@
+.Item {
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 40px auto 40px;
+  align-items: center;
+  align-content: center;
+  width: 96%;
+  height: 44px;
+  margin: 1rem auto;
+  border: 1px solid $color-black;
+  border-radius: 5px;
+
+  &__text {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    height: inherit;
+    width: inherit;
+    padding-left: 1rem;
+    border-left: 1px solid $color-black;
+    cursor: pointer;
+    font-size: 1.6rem;
+
+    &:focus-visible {
+      outline: none;
+    }
+  }
+  &__button {
+    width: 40px;
+    height: inherit;
+    border: none;
+    font-weight: bold;
+    color: $color-black;
+    &:hover {
+      cursor: pointer;
+    }
+    &.button--delete {
+      background-color: $color-red;
+      font-size: 2rem;
+      border-left: 1px solid $color-black;
+      &:active {
+        background-color: $color-light-red;
+      }
+    }
+    &.button--check {
+      display: none;
+      &+ label {
+        cursor: pointer;
+
+      }
+      &:checked + label:before {
+        content: '';
+        font-size: 1.5rem;
+        color: $color-black;
+        background-color: $color-finished;
+        border: 1px solid $color-black;
+      }
+    }
+
+  }
+}
+label {
+  display: flex;
+  justify-content: center;
+  font-size: 1.5rem;
+  &:before {
+    display: flex;
+    display: inline-block;
+    content: "";
+    width: 26px;
+    height: 26px;
+    text-align: center;
+    color: $color-white;
+    background-color: $color-inProgress;
+    border: 1px solid $color-black;
+    border-radius: 50%;
+  }
+}

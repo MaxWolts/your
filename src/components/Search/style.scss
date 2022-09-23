@@ -1,0 +1,40 @@
+.Search {
+  display: flex;
+  height: 44px;
+  width: 90%;
+  margin-bottom: $margin-standard;
+  border: 1px solid $color-black;
+  border-radius: 5px;
+  overflow: hidden;
+  min-height: 44px;
+
+  &:focus-within  {
+    outline: 2px solid $color-black;
+  }
+  &__input {
+    width: inherit;
+    margin-left: 10px;
+    border: none;
+    font-size: 1.6rem;
+
+    &:focus-visible {
+      outline: none;
+    }
+  }
+  &__button {
+    height: 100%;
+    width: 45px;
+    background-color: $color-white;
+    color: $color-black;
+    border: none;
+    font-weight: 400;
+
+    &:hover {
+      cursor: pointer;
+    }
+    &:active {
+      background-color: $color-light-black;
+      color: $color-white;
+    }
+  }
+}

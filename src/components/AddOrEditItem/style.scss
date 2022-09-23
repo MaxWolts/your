@@ -1,0 +1,44 @@
+.AddOrEditItem {
+  display: flex;
+  flex-direction: column;
+  padding: 0 5%;
+  width: 90%;
+  background-color: $color-white;
+
+  input, select, option {
+    height: 44px;
+    font-size: 1.6rem;
+    margin-bottom: 16px;
+  }
+  span {
+    font-size: 1.6rem;
+  }
+}
+.AddOrdEditItem__buttons {
+  display: flex;
+  justify-content: space-between;
+
+  button{
+    margin-bottom: 3rem;
+    padding: 8px 0;
+    width: 45%;
+    font-size: 16px;
+    border: none;
+    color: $color-white;
+    background-color: $color-black;
+    cursor: pointer;
+
+    &:active {
+      background-color: $color-light-black;
+      color: $color-white;
+    }
+  }
+  .cancel {
+    background-color: $color-white;
+    color: $color-black;
+    border: 1px solid $color-black;
+
+  }
+}
+
+

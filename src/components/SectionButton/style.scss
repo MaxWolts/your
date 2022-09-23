@@ -1,0 +1,39 @@
+.SectionButton {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 44px;
+  min-height: 44px;
+  width: 217px;
+  margin-bottom: $margin-standard;
+  border: 1px solid $color-black;
+  border-radius: 5px;
+  overflow: hidden;
+  font-size: 2.6rem;
+
+  &:before {
+    z-index: 0;
+    position: absolute;
+    content: "";
+    top: -1px;
+    left: -1px;
+    height: 44px;
+    width: 108.5px;
+    border-left: 1px solid $color-black;
+    border-right: 1px solid $color-black;
+    background-color: $color-inProgress;
+    border-radius: 5px;
+    transition: transform linear .2s;
+  }
+  & button {
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    cursor: pointer;
+  }
+  &--active:before {
+    background-color: $color-finished;
+    transform: translateX(100%);
+  }
+}
+

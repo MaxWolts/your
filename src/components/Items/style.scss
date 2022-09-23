@@ -1,0 +1,37 @@
+.Total-items {
+  font-size: 18px;
+}
+.Items {
+  min-height: 200px;
+  height: 50vh;
+  max-height: 360px;
+  width: 90%;
+  margin: $margin-standard 0;
+  overflow-y: scroll;
+  border: 1px solid $color-black;
+  border-radius: 2px;
+
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+  &::-webkit-scrollbar-track {
+    background: $color-black;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $color-white;
+    border-radius: 5px;
+    border: 1px solid $color-black;
+  }
+  .no-data-menssage {
+    text-align: center;
+  }
+  & .no-data-menssage {
+    font-size: 18px;
+    margin-top: $margin-standard;
+  }
+}
+.Item {
+  &__text {
+    font-size: 1.6rem;
+  }
+}

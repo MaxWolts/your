@@ -1,0 +1,42 @@
+.Title {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 63px;
+  width: fit-content;
+  margin-top: $margin-standard;
+  margin-bottom: $margin-standard;
+
+
+  &__your {
+    position: relative;
+    width: 110px;
+    text-align: center;
+  }
+  &__your h1{
+    z-index: 1;
+    position: relative;
+    mix-blend-mode: difference;
+    color: $color-white;
+    @include Title;
+  }
+  &__your:before {
+    position: absolute;
+    z-index: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    content: "";
+    height: 27px;
+    width: 99px;
+    background-color: $color-black;
+  }
+  &__name {
+    width: 220px;
+    color: $color-black;
+    width: fit-content;
+    @include Title;
+  }
+}
+
+

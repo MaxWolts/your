@@ -1,0 +1,15 @@
+.Structure {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  max-height: 688px;
+  max-width: 380px;
+  min-width: 320px;
+  width: 100vw;
+  font-size: 4rem;
+  border: 1px solid $color-black;
+  background-color: $color-white;
+}
