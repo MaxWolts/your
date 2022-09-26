@@ -62,7 +62,12 @@ function useItems () {
   const getTotalItemsByCategory = (category: Category) => {
     let newItems: Item[]
     newItems = items.filter(item => item.category === category);
-    return newItems.length
+    let peding = newItems.filter((item => item.state === false))
+    return {
+      total: newItems.length,
+      pendient: peding.length,
+      finished: newItems.length - peding.length
+    }
   }
 
   return {

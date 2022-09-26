@@ -20,7 +20,14 @@
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
+    &--selected {
+      color: $color-black;
+      background-color: $color-white;
 
+      & svg {
+        stroke-width: 1.5;
+      }
+    }
     &:active {
       background-color: $color-light-black;
     }
@@ -29,4 +36,5 @@
     }
   }
 }
+
 

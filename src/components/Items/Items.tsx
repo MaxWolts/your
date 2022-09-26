@@ -13,7 +13,11 @@ interface Props {
   searchedItems: ItemType[],
   searchValue: string,
   openModal: () => void,
-  getTotalItemsByCategory: (category: Category) => number
+  getTotalItemsByCategory: (category: Category) => {
+    total: number;
+    pendient: number;
+    finished: number;
+  }
 }
 
 const Items = ({setModalData, sectionName, getItems, changeState, filterState, deleteItem, searchedItems, searchValue, openModal, getTotalItemsByCategory }:Props) => {
@@ -23,10 +27,10 @@ const Items = ({setModalData, sectionName, getItems, changeState, filterState, d
   if(searchedItems.length >= 1) {
     newSearchedItems = searchedItems.filter(item => item.category == sectionName);
   };
-
+  let totals = getTotalItemsByCategory(sectionName)
   return(
     <>
-      <p className="Total-items">Total items: {getTotalItemsByCategory(sectionName)}</p>
+      <p className="Total-items">Pending: {totals.pendient} Finished: {totals.finished}</p>
       <div className="Items">
         {searchValue.length >= 1 &&
           (newSearchedItems.length >= 1?
